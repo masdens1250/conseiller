@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    direction: ltr;
+  }
+
+  :root[dir="rtl"] {
+    direction: rtl;
+  }
+
+  /* Support for Arabic font */
+  @font-face {
+    font-family: 'Noto Sans Arabic';
+    src: url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap');
+  }
+
+  html[dir="rtl"] {
+    font-family: 'Noto Sans Arabic', sans-serif;
+  }
+}
